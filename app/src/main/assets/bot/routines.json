@@ -1,0 +1,48 @@
+{
+  "gamePackage": "com.runawayplay.dragons",
+  "loopDelayMs": 1500,
+  "matchThreshold": 0.85,
+  "routines": [
+    {
+      "id": "popups",
+      "name": "Close popups",
+      "steps": [
+        { "type": "tapAll", "templates": ["close_x", "ok_button", "claim_button"], "maxTaps": 3, "delayMs": 800 }
+      ]
+    },
+    {
+      "id": "collect",
+      "name": "Collect resources",
+      "steps": [
+        { "type": "tapAll", "templates": ["resource_1", "resource_2", "resource_3"], "maxTaps": 15, "delayMs": 350 }
+      ]
+    },
+    {
+      "id": "hatch",
+      "name": "Hatch eggs",
+      "steps": [
+        { "type": "tap", "template": "egg_ready", "waitAfterMs": 1200 },
+        { "type": "tap", "template": "hatch_button", "optional": true, "waitAfterMs": 2500 },
+        { "type": "tap", "template": "close_x", "optional": true, "waitAfterMs": 800 }
+      ]
+    },
+    {
+      "id": "summon",
+      "name": "Summon dragons",
+      "steps": [
+        { "type": "tap", "template": "summon_open", "waitAfterMs": 1200 },
+        { "type": "tap", "template": "summon_button", "waitAfterMs": 2500 },
+        { "type": "tap", "template": "close_x", "optional": true, "waitAfterMs": 800 }
+      ]
+    },
+    {
+      "id": "feed",
+      "name": "Feed and raise dragons",
+      "steps": [
+        { "type": "tap", "template": "dragon_needs_care", "waitAfterMs": 1200 },
+        { "type": "tap", "template": "feed_button", "waitAfterMs": 1000 },
+        { "type": "tap", "template": "close_x", "optional": true, "waitAfterMs": 800 }
+      ]
+    }
+  ]
+}

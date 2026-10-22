@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HatchBot</string>
+    <string name="accessibility_description">Lets HatchBot look at the screen and tap for you while you play Hatch Dragons. It only acts when you press start on its floating bar.</string>
+    <color name="icon_background">#4B3A8C</color>
+</resources>
