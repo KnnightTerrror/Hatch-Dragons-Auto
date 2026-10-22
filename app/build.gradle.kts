@@ -48,6 +48,12 @@ android {
     lint {
         checkReleaseBuilds = false
     }
+
+    // Compress the OpenCV libraries and code inside the APK: 40 MB -> about 17 MB to download.
+    packaging {
+        jniLibs.useLegacyPackaging = true
+        dex.useLegacyPackaging = true
+    }
 }
 
 dependencies {
